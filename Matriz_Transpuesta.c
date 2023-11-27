@@ -22,7 +22,7 @@ int main()
         for (j = 0; j < col; j++)
         {
             matrix[i][j] = rand() % 101;
-            printf("%d ", matrix[i][j]);
+            printf("%d \t ", matrix[i][j]);
         }
         printf("\n");
     }
@@ -34,7 +34,7 @@ int main()
     {
         for (j = 0; j < fil; j++)
         {
-            printf("%d ", matrix[j][i]);
+            printf("%d \t ", matrix[j][i]);
         }
         printf("\n");
     }
