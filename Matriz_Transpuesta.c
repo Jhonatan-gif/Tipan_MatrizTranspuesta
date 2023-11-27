@@ -11,6 +11,7 @@ int main()
     printf("Ingrese el numero de columnas de la matriz: ");
     scanf("%d", &col);
 
+
     //numeros aleatorios e impresion de la matriz original
     int matrix[fil][col];
     srand(time(0));
@@ -26,6 +27,17 @@ int main()
         printf("\n");
     }
 
+
+    //Impresion de matriz transpuesta
+    printf("\nMatriz transpuesta:\n");
+    for (i = 0; i < col; i++)
+    {
+        for (j = 0; j < fil; j++)
+        {
+            printf("%d ", matrix[j][i]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
