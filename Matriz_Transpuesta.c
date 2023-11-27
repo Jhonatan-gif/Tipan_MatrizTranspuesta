@@ -1,20 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-#define Max 100
+int main()
+{
+    //Pedir dimensiones
+    int fil , col, i, j;
+    printf("Ingrese el numero de filas de la matriz: ");
+    scanf("%d", &fil);
+    printf("Ingrese el numero de columnas de la matriz: ");
+    scanf("%d", &col);
 
-int main (){
-    
-    int fil , col ;
+    //numeros aleatorios e impresion de la matriz original
+    int matrix[fil][col];
+    srand(time(0));
 
-    //Pedir datos fias y columnas
-    printf ("Ingrese el numero de filas : ");
-    scanf ("%i",&fil);
+    printf("\nMatriz original:\n");
+    for (i = 0; i < fil; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            matrix[i][j] = rand() % 101;
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
 
-    printf ("Ingrese el numero de columnas : ");
-    scanf ("%i",&col);
 
-
-
-
-    return 0 ;
+    return 0;
 }
